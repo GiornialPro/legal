@@ -9,7 +9,7 @@ def casa():
 
     user = 'Adaylson Dias, Eng.'
 
-    return render_template( f'home.html' , user = user)
+    return render_template( 'home.html' , user = user)
 
 if __name__ == "__main__":
     app.run( port='10000', host = '0.0.0.0' )
