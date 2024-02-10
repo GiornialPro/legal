@@ -1,9 +1,5 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
-
-from flask import Flask, render_template
-
 from crudhrs import Sistema
 
 app = Flask(__name__)
