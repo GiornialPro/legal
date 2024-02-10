@@ -12,6 +12,9 @@ class Sistema:
     def origina(self):
         
         pass
-        book = Workbook()
+        book = pd.read_excel('UNIDADE.xlsx', sheet_name='unidade')
+        book_dic = book.to_dict('list')
 
-        book.save('HORARIOS..xlsx')
+
+
+        return book_dic
