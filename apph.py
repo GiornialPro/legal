@@ -1,11 +1,17 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-fonte = 'https://github.com/GiornialPro/legal/blob/main/'
 
+from flask import Flask, render_template
+
+from crudhrs import Sistema
+
+app = Flask(__name__)
 
 @app.route('/')
 def casa():
+
+    Sistema().origina()
 
     user = 'Adaylson Dias, Eng.'
 
