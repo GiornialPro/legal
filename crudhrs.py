@@ -39,3 +39,5 @@ class Sistema:
                 book_to_add['usuarios'][xlrd.cellname( 0, 1 )] = 'chave'
 
                 book_to_add.save(self.sourc)
+
+        return senha, user, magic
