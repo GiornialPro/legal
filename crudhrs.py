@@ -16,8 +16,6 @@ class Sistema:
         book = pd.read_excel(self.sourc, sheet_name='unidade')
         book_dic = book.to_dict('list')
 
-
-
         return book_dic
 
     def addciona(self):
