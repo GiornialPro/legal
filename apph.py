@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def casa():
 
-    Sistema().origina()
+    Sistema().addciona()
 
     user = 'Adaylson Dias, Eng.'
     data = Sistema().origina()
