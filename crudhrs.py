@@ -27,6 +27,7 @@ class Sistema:
     def addciona(self):
         
         book_to_add = load_workbook(self.sourc)
+        opn = pd.read_excel(self.sourc, sheet_name='unidade')
         
         user = request.form['user']
         senha = request.form['senha']
@@ -38,12 +39,10 @@ class Sistema:
 
         if f'{magic}'.strip() == 'registrar':
             pass
-                
-            book_to_add.create_sheet('usuarios')
 
-            book_to_add['usuarios'][xlrd.cellname( 0, 0 )] = 'Nome'
-            book_to_add['usuarios'][xlrd.cellname( 0, 1 )] = 'chave'
+            book_to_add['unidade'][xlrd.cellname( 0, 0 )] = 'Nome'
+            book_to_add['unidade'][xlrd.cellname( 0, 1 )] = 'chave'
 
             book_to_add.save(self.sourc)
 
-            return senha, user, magic
+            return senha, user, magic, opn
