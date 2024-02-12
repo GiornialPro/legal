@@ -21,12 +21,12 @@ class Sistema:
     def addciona(self):
         
         book_to_add = load_workbook(self.sourc)
+        
+        user = request.form['user']
+        senha = request.form['senha']
+        magic = request.form['magicword']
 
         if request.method == 'POST':
-
-            user = request.form['user']
-            senha = request.form['senha']
-            magic = request.form['magicword']
 
             print(f'{magic}'.strip() == 'registrar', '##################')
 
@@ -40,4 +40,4 @@ class Sistema:
 
                 book_to_add.save(self.sourc)
 
-            return senha, user, magic
+        return senha, user, magic
