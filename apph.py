@@ -24,7 +24,7 @@ def home():
     user = 'Adaylson Dias, Eng.'
     data = Sistema('UNIDADE.xlsx').origina()
 
-    return render_template( 'home.html' , user = user, data=data, a=a)
+    return render_template( 'home2.html' , user = user, data=data, a=a)
 
 
 if __name__ == "__main__":

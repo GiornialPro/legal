@@ -12,11 +12,17 @@ class Sistema:
 
     def origina(self):
         
-        pass
-        book = pd.read_excel(self.sourc, sheet_name='unidade')
-        book_dic = book.to_dict('list')
+        loadb = load_workbook(self.sourc)
+        booktotal = {'GERAL':''}
 
-        return book_dic
+        for i in loadb.sheetnames:
+
+            book = pd.read_excel(self.sourc, sheet_name='unidade')
+            book_dic = book.to_dict('list')
+
+            booktotal['GERAL'] = book_dic
+
+        return booktotal
 
     def addciona(self):
         
