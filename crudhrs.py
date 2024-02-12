@@ -28,6 +28,8 @@ class Sistema:
             senha = request.form['senha']
             magic = request.form['magicword']
 
+            print(f'{magic}'.strip() == 'registrar', '##################')
+
             if f'{magic}'.strip() == 'registrar':
                 pass
                 

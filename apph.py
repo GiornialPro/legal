@@ -4,6 +4,9 @@ from crudhrs import Sistema
 
 app = Flask(__name__)
 
+app.config.from_mapping(secret_key='merdatoda222', DEBUG=True)
+app.config["SESSION_PERMANET"] = False
+
 @app.route('/', methods=['POST','GET'] )
 def casa():
 
