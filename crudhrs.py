@@ -40,10 +40,11 @@ class Sistema:
 
         if f'{magic}'.strip() == 'registrar':
             pass
+            
+            book_to_add.create_sheet('Membros')
 
-            book_to_add['unidade'][xlrd.cellname( 0, 0 )] = 'Nome'
-            book_to_add['unidade'][xlrd.cellname( 0, 1 )] = 'chave'
-
+            book_to_add['unidade'][xlrd.cellname( 0, 0 )] = 'NOME'
+            book_to_add['unidade'][xlrd.cellname( 0, 1 )] = 'CHAVE'
             book_to_add['unidade'][xlrd.cellname( 1, 0 )] = user
             book_to_add['unidade'][xlrd.cellname( 1, 1 )] = senha
 
