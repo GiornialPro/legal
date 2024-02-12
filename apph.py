@@ -4,7 +4,7 @@ from crudhrs import Sistema
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['POST','GET'] )
 def casa():
 
     Sistema('UNIDADE.xlsx').addciona()
