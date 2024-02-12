@@ -46,4 +46,4 @@ class Sistema:
 
             book_to_add.save(self.sourc)
 
-            return senha, user, magic, opn_o
+            return senha, user, magic, f'new: {opn_o}'
