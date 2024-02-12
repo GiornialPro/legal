@@ -24,3 +24,18 @@ class Sistema:
         
         book_to_add = load_workbook(self.sourc)
 
+        if request.method == 'POST':
+
+            user = request.form['user']
+            senha = request.form['senha']
+            magic = request.form['magicword']
+
+            if f'{magic}'.strip() == 'registrar':
+                pass
+                
+                book_to_add.create_sheet('usuarios')
+
+                book_to_add['usuarios'][xlrd.cellname( 0, 0 )] = 'Nome'
+                book_to_add['usuarios'][xlrd.cellname( 0, 1 )] = 'chave'
+
+                book_to_add.save(self.sourc)
