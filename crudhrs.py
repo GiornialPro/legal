@@ -32,18 +32,18 @@ class Sistema:
         senha = request.form['senha']
         magic = request.form['magicword']
 
-        if request.method == 'POST':
+        # if request.method == 'POST':
 
-            print(f'{magic}'.strip() == 'registrar', '##################')
+        print(f'{magic}'.strip() == 'registrar', '##################')
 
-            if f'{magic}'.strip() == 'registrar':
-                pass
+        if f'{magic}'.strip() == 'registrar':
+            pass
                 
-                book_to_add.create_sheet('usuarios')
+            book_to_add.create_sheet('usuarios')
 
-                book_to_add['usuarios'][xlrd.cellname( 0, 0 )] = 'Nome'
-                book_to_add['usuarios'][xlrd.cellname( 0, 1 )] = 'chave'
+            book_to_add['usuarios'][xlrd.cellname( 0, 0 )] = 'Nome'
+            book_to_add['usuarios'][xlrd.cellname( 0, 1 )] = 'chave'
 
-                book_to_add.save(self.sourc)
+            book_to_add.save(self.sourc)
 
-        return senha, user, magic
+            return senha, user, magic
