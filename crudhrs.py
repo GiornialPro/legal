@@ -28,6 +28,7 @@ class Sistema:
         
         book_to_add = load_workbook(self.sourc)
         opn = pd.read_excel(self.sourc, sheet_name='unidade')
+        opn_o = opn.to_dict('list')
         
         user = request.form['user']
         senha = request.form['senha']
@@ -45,4 +46,4 @@ class Sistema:
 
             book_to_add.save(self.sourc)
 
-            return senha, user, magic, opn
+            return senha, user, magic, opn_o
