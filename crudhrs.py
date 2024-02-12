@@ -44,10 +44,9 @@ class Sistema:
             book_to_add['unidade'][xlrd.cellname( 0, 0 )] = 'Nome'
             book_to_add['unidade'][xlrd.cellname( 0, 1 )] = 'chave'
 
-            book_to_add['unidade'][xlrd.cellname( 2, 0 )] = 'Nome'
-            book_to_add['unidade'][xlrd.cellname( 2, 1 )] = 'chave'
+            book_to_add['unidade'][xlrd.cellname( 1, 0 )] = user
+            book_to_add['unidade'][xlrd.cellname( 1, 1 )] = senha
 
-        
         book_to_add.save(self.sourc)
 
         return senha, user, magic, f'new: {opn_o}'
