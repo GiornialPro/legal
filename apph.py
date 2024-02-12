@@ -7,10 +7,10 @@ app = Flask(__name__)
 @app.route('/')
 def casa():
 
-    Sistema().addciona()
+    Sistema('UNIDADE.xlsx').addciona()
 
     user = 'Adaylson Dias, Eng.'
-    data = Sistema().origina()
+    data = Sistema('UNIDADE.xlsx').origina()
 
     return render_template( 'home.html' , user = user, data=data)
 
