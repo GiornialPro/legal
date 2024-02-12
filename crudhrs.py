@@ -8,7 +8,7 @@ import xlrd
 class Sistema:
 
     def __init__(self, sourc):
-        self.sourc = 'UNIDADE.xlsx'
+        self.sourc = sourc
 
     def origina(self):
         
